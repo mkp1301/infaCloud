@@ -1,0 +1,23 @@
+{
+  "objectInfo" : {
+    "id" : "8Dv7ltpgU6re6jmE1MSem6",
+    "name" : "P1_Folder1",
+    "type" : "Folder",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : null,
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "COMPLETE"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2024-04-16T23:24:10.406Z",
+  "objectRefs" : [ ]
+}
