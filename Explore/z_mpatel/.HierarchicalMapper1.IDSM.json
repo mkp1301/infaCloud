@@ -1,0 +1,65 @@
+{
+  "objectInfo" : {
+    "id" : "56AwlCWkKvykPu97bOYq0U",
+    "name" : "HierarchicalMapper1",
+    "type" : "IDSM",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "jxzbovcwgbsngp2m6wu6cm"
+      },
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "dat",
+  "updateTime" : "2024-04-25T02:37:31.684Z",
+  "objectRefs" : [ {
+    "id" : "8r4vkzRkqeVcyhVB7DwYwW",
+    "name" : "hschema_CountryFinancial_Full",
+    "type" : "HSCHEMA",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVDD36000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/z_mpatel"
+  }, {
+    "id" : "28eazV9V8tQkifVQCcgrWU",
+    "name" : "hschema_CountryFinancial_Target",
+    "type" : "HSCHEMA",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVDD36000000000003"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/z_mpatel"
+  } ]
+}
