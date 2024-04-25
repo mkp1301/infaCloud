@@ -1,0 +1,28 @@
+{
+  "objectInfo" : {
+    "id" : "28eazV9V8tQkifVQCcgrWU",
+    "name" : "hschema_CountryFinancial_Target",
+    "type" : "HSCHEMA",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVDD36000000000003"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-04-25T02:31:33.050Z",
+  "objectRefs" : [ ]
+}
