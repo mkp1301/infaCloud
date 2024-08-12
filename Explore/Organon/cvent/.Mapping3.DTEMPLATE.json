@@ -1,0 +1,77 @@
+{
+  "objectInfo" : {
+    "id" : "3T1ek51Y8txlGlH0JlSFgb",
+    "name" : "Mapping3",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVDD1700000000000E"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2024-08-12T20:31:45.532Z",
+  "objectRefs" : [ {
+    "id" : "l2jDvWER6Ctl2T3bx7yHSk",
+    "name" : "ff_local_win",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVDD0B000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "3EmcgUrJqiAb37rMxxYTGo",
+    "name" : "bs_cvent_create_meeting_req",
+    "type" : "BSERVICE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01CVDD27000000000003"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      }, {
+        "name" : "01CVDD28000000000009",
+        "value" : "3EmcgUrJqiAb37rMxxYTGo@Retrieve_event"
+      }, {
+        "name" : "01CVDD28000000000005",
+        "value" : "3EmcgUrJqiAb37rMxxYTGo@CreateMeetingRequest_SOAP1.2"
+      } ],
+      "additionalInfo" : {
+        "description" : "ff",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Organon/cvent"
+  } ]
+}
