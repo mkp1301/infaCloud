@@ -1,7 +1,7 @@
 {
   "objectInfo" : {
     "id" : "3dibWg1NCayh6dBiLiz0oI",
-    "name" : "DevWorkspace",
+    "name" : "Workspace",
     "type" : "Project",
     "metadata" : {
       "modelVersion" : {
@@ -18,7 +18,7 @@
     }
   },
   "dataFileExtension" : "json",
-  "updateTime" : "2025-08-20T17:02:32.577Z",
+  "updateTime" : "2025-08-20T17:19:11.285Z",
   "objectRefs" : [ ],
   "readableFileExtension" : null,
   "readableFilePresent" : false
