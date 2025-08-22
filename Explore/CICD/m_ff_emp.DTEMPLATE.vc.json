@@ -1,9 +1,11 @@
 {
   "content" : {
+    "description" : "changes for rel1",
     "allowMaxFieldLength" : "false",
     "bigIntConvertType" : "ONLY_BIGINT",
     "documentType" : "MAPPING",
     "name" : "m_ff_emp",
+    "specialCharacterSupport" : "false",
     "links" : [
       {
         "link" : "Source -> Target"
@@ -123,6 +125,7 @@
               "delimiter" : ",",
               "firstDataRow" : 2,
               "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
               "headerLineNo" : 1,
               "multiDelimitersAsAnd" : "true",
               "rowDelimiter" : 0,
@@ -190,6 +193,7 @@
         "fieldMappingMode" : "BY_NAME",
         "inputSorted" : "false",
         "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
         "updateColumns" : null,
         "useLabels" : "false",
         "useSequenceFields" : "false",
@@ -2419,5 +2423,5 @@
       }
     ]
   },
-  "vcsExportTime" : "2025-07-23 19:29:34 PDT"
+  "vcsExportTime" : "2025-08-21 18:48:21 PDT"
 }
