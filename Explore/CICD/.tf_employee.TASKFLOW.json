@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "hc7lRos7YOee6kj8uHBEG3",
+    "name" : "tf_employee",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "4BsoZduD2L5SeE1-gt-4015838-2025-08-22T02:07:09.025Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-22T02:07:55.371Z",
+  "objectRefs" : [ {
+    "id" : "kkMyHdziW6ijNsWKk6Wx62",
+    "name" : "mct_ff_emp",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01D2E50Z000000000008"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/CICD"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
