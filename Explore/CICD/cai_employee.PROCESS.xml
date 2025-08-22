@@ -1,0 +1,61 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>T7dwcnPCOkSSHCw-gt-11805209-2025-08-22T02:52:05.734Z::pd.xml</types1:EntryId>
+      <types1:Name>employee</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>mpatel@informatica.com.SAML3</types1:CreatedBy>
+      <types1:CreationDate>2025-08-22T02:52:06Z</types1:CreationDate>
+      <types1:ModifiedBy>mpatel@informatica.com.SAML3</types1:ModifiedBy>
+      <types1:ModificationDate>2025-08-22T02:52:25Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>mpatel@informatica.com.SAML3</types1:PublishedBy>
+      <types1:PublicationDate>2025-08-22T02:52:28Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.employee/employee.pd.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  GUID="888aRnP3SOCfr36MVE5KwK"
+                  displayName="cai_employee"
+                  name="employee"
+                  overrideAPIName="true">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags/>
+            <generator>Informatica Process Designer 11</generator>
+            <notes/>
+            <deployment skipIfRunning="false" suspendOnFault="false" tracingLevel="none">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <extData>
+               <nvpair name="treatEmptyStringAsNotNull">false</nvpair>
+               <nvpair name="treatEmptyStringAsNull">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsArray">true</nvpair>
+               <nvpair name="treatEmptyObjectListAsNotArray">false</nvpair>
+            </extData>
+            <flow id="m3e7df9d5-23d5-4c4d-a898-769f1fe5a4a6">
+               <start id="gaa4e8da3-36da-40e8-8ce0-7285a9690c90">
+                  <link id="eacbf4823-14e3-424f-bd20-18c8dff3e18d"
+                        targetId="end-yd0924679-01ec-4ad9-b8c3-d529f041256a"/>
+               </start>
+               <end id="end-yd0924679-01ec-4ad9-b8c3-d529f041256a">
+                  <title>End</title>
+               </end>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>888aRnP3SOCfr36MVE5KwK</types1:GUID>
+      <types1:DisplayName>cai_employee</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-08-22T02:53:10.778Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

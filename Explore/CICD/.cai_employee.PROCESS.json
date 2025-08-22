@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "888aRnP3SOCfr36MVE5KwK",
+    "name" : "cai_employee",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "T7dwcnPCOkSSHCw-gt-11805209-2025-08-22T02:52:05.734Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-22T02:53:11.019Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
