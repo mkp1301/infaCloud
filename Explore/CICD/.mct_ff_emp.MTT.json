@@ -23,7 +23,7 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-06-11T04:48:17.324Z",
+  "updateTime" : "2025-08-27T16:43:21.226Z",
   "objectRefs" : [ {
     "id" : "7itVVhud045j3MOxfnpB2D",
     "name" : "mfcdi4pc.informatica.com",
@@ -61,7 +61,7 @@
         "value" : "@1"
       } ],
       "additionalInfo" : {
-        "description" : "",
+        "description" : "changes for rel1",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
