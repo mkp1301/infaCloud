@@ -8,7 +8,10 @@
     "specialCharacterSupport" : "false",
     "links" : [
       {
-        "link" : "Source -> Target"
+        "link" : "Expression -> Target"
+      },
+      {
+        "link" : "Source -> Expression"
       }
     ],
     "transformations" : [
@@ -247,8 +250,33 @@
             "useSuccessFile" : "false"
           }
         }
+      },
+      {
+        "createTime" : "2025-08-27T16:47:42.174Z",
+        "name" : "Expression",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
       }
     ]
   },
-  "vcsExportTime" : "2025-08-27 09:43:17 PDT"
+  "vcsExportTime" : "2025-08-27 09:48:39 PDT"
 }
