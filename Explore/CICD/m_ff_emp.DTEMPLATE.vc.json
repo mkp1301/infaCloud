@@ -8,10 +8,13 @@
     "specialCharacterSupport" : "false",
     "links" : [
       {
-        "link" : "Expression -> Target"
+        "link" : "Source -> Expression"
       },
       {
-        "link" : "Source -> Expression"
+        "link" : "Expression1 -> Target"
+      },
+      {
+        "link" : "Expression -> Expression1"
       }
     ],
     "transformations" : [
@@ -275,8 +278,33 @@
           "startOffset" : 0,
           "partitionKeys" : null
         }
+      },
+      {
+        "createTime" : "2025-08-27T21:23:21.708Z",
+        "name" : "Expression1",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
       }
     ]
   },
-  "vcsExportTime" : "2025-08-27 14:19:44 PDT"
+  "vcsExportTime" : "2025-08-27 14:23:47 PDT"
 }
