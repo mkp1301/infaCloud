@@ -8,10 +8,13 @@
     "specialCharacterSupport" : "false",
     "links" : [
       {
-        "link" : "Source -> Expression"
+        "link" : "Expression -> Target"
       },
       {
-        "link" : "Expression -> Target"
+        "link" : "Source -> Filter"
+      },
+      {
+        "link" : "Filter -> Expression"
       }
     ],
     "transformations" : [
@@ -275,8 +278,25 @@
           "startOffset" : 0,
           "partitionKeys" : null
         }
+      },
+      {
+        "createTime" : "2025-08-27T22:07:51.511Z",
+        "name" : "Filter",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "vcsExportTime" : "2025-08-27 14:49:17 PDT"
+  "vcsExportTime" : "2025-08-27 15:08:41 PDT"
 }
