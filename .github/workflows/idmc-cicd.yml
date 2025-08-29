@@ -1,0 +1,71 @@
+
+name: IDMC - Promote Single Commit from Dev to QA
+
+on:
+  push:
+    branches:
+      - dev
+    tags:
+      - 'Jira-*'   # Only run when a tag starting with "qa-" is created on a dev commit
+
+jobs:
+  promote:
+    name: Cherry-pick Tagged Commit into QA and Trigger Informatica
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # fetch full history for cherry-pick
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Cherry-pick tagged commit into QA
+        run: |
+          git fetch origin dev
+          git fetch origin qa
+
+          git checkout qa
+          git cherry-pick -X theirs $GITHUB_SHA || true
+          git push origin qa
+
+      - name: Authenticate with Informatica Cloud
+        id: infa_auth
+        run: |
+          echo "Authenticating with Informatica Cloud..."
+          RESPONSE=$(curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d '{
+                  "username": "${{ secrets.INFA_USERNAME }}",
+                  "password": "${{ secrets.INFA_PASSWORD }}",
+                  "clientId": "${{ secrets.INFA_CLIENT_ID }}",
+                  "clientSecret": "${{ secrets.INFA_CLIENT_SECRET }}"
+                }' \
+            https://dm-us.informaticacloud.com/ma/api/v2/user/login)
+
+          echo "Full response: $RESPONSE"
+          SESSION_ID=$(echo $RESPONSE | jq -r '.icSessionId')
+          if [ "$SESSION_ID" = "null" ] || [ -z "$SESSION_ID" ]; then
+            echo "Authentication failed"
+            exit 1
+          fi
+          echo "SESSION_ID=$SESSION_ID" >> $GITHUB_ENV
+
+      - name: Trigger Informatica Cloud Job
+        run: |
+          echo "Triggering Informatica Cloud for commit $GITHUB_SHA"
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -H "icSessionId: $SESSION_ID" \
+            -d '{
+                  "commitHash": "'"$GITHUB_SHA"'",
+                  "branch": "qa",
+                  "tag": "'"$GITHUB_REF_NAME"'"
+                }' \
+            https://dm-us.informaticacloud.com/saas/api/v2/job/trigger
+
+
