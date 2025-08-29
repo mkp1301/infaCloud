@@ -34,4 +34,24 @@ jobs:
           git cherry-pick -X theirs $GITHUB_SHA || true
           git push origin qa
 
+      - name: Authenticate with Informatica Cloud
+        id: infa_auth
+        run: |
+          echo "Authenticating with Informatica Cloud..."
+          RESPONSE=$(curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d '{
+                  "username": "${{ secrets.INFA_USERNAME }}",
+                  "password": "${{ secrets.INFA_PASSWORD }}"
+                }' \
+            https://dm-us.informaticacloud.com/ma/api/v2/user/login)
+
+          echo "Full response: $RESPONSE"
+          SESSION_ID=$(echo $RESPONSE | jq -r '.icSessionId')
+          if [ "$SESSION_ID" = "null" ] || [ -z "$SESSION_ID" ]; then
+            echo "Authentication failed"
+            exit 1
+          fi
+          echo "SESSION_ID=$SESSION_ID" >> $GITHUB_ENV
+
      
