@@ -30,9 +30,11 @@ jobs:
           git fetch origin dev
           git fetch origin qa
 
+          echo "Hash from trigger: $GITHUB_SHA"
           git checkout qa
           git cherry-pick -X theirs $GITHUB_SHA || true
           git push origin qa
+          echo "Hash after push: ${{ github.sha }}"
 
       - name: Authenticate with Infa Cloud
         id: infa_auth
@@ -66,7 +68,7 @@ jobs:
             -H "Content-Type: application/json" \
             -H "INFA-SESSION-ID: $SESSION_ID" \
             -d '{
-                  "commitHash": "$GITHUB_SHA",
+                  "commitHash": "${{ github.sha }}",
                   "searchCustomRepositories": true
                 }' \
             $INFA_API_URL/public/core/v3/pullByCommitHash
