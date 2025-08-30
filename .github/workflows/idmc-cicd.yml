@@ -34,7 +34,8 @@ jobs:
           git checkout qa
           git cherry-pick -X theirs $GITHUB_SHA || true
           git push origin qa
-          echo "Hash after push: ${{ github.sha }}"
+          echo "Hash after push: $(git rev-parse HEAD)"
+          echo "COMMIT_SHA=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
       - name: Authenticate with Infa Cloud
         id: infa_auth
@@ -68,7 +69,7 @@ jobs:
             -H "Content-Type: application/json" \
             -H "INFA-SESSION-ID: $SESSION_ID" \
             -d '{
-                  "commitHash": "${{ github.sha }}",
+                  "commitHash": "$COMMIT_SHA",
                   "searchCustomRepositories": true
                 }' \
             $INFA_API_URL/public/core/v3/pullByCommitHash
