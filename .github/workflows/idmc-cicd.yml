@@ -34,7 +34,7 @@ jobs:
           git cherry-pick -X theirs $GITHUB_SHA || true
           git push origin qa
 
-      - name: Authenticate with Informatica Cloud
+      - name: Authenticate with Infa Cloud
         id: infa_auth
         run: |
           echo "Authenticating with Informatica Cloud..."
@@ -53,5 +53,22 @@ jobs:
             exit 1
           fi
           echo "SESSION_ID=$SESSION_ID" >> $GITHUB_ENV
+          
+          INFA_API_URL=$(echo $RESPONSE | jq -r '.baseApiUrl')
+          echo "INFA_API_URL=$INFA_API_URL" >> $GITHUB_ENV
 
-     
+      - name: Pull into Infa Cloud
+        id: infa_pull_by_hash
+        run: |
+          echo "Pulling code into Infa Cloud..."
+          RESPONSE=$(curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d '{
+                  "commitHash": "$GITHUB_SHA",
+                  "searchCustomRepositories": true
+                }' \
+            $INFA_API_URL/public/core/v3/pullByCommitHash
+            )
+
+          echo "Full response: $RESPONSE"
+          INFA_PULL_ID=$(echo $RESPONSE | jq -r '.pullActionId')
