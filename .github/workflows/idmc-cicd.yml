@@ -55,7 +55,7 @@ jobs:
           fi
           echo "SESSION_ID=$SESSION_ID" >> $GITHUB_ENV
           
-          INFA_API_URL=$(echo $RESPONSE | jq -r '.products.baseApiUrl')
+          INFA_API_URL=$(echo $RESPONSE | jq -r '.products[0].baseApiUrl')
           echo "INFA_API_URL=$INFA_API_URL" >> $GITHUB_ENV
 
       - name: Pull into Infa Cloud
