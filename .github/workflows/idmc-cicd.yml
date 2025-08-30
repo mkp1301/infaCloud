@@ -38,7 +38,6 @@ jobs:
         id: infa_auth
         run: |
           echo "Authenticating with Informatica Cloud..."
-          echo "${{ secrets.IDMC_USER }}"
           RESPONSE=$(curl -s -X POST \
             -H "Content-Type: application/json" \
             -d '{
@@ -48,14 +47,15 @@ jobs:
             https://dm-us.informaticacloud.com/saas/public/core/v3/login)
 
           echo "Full response: $RESPONSE"
-          SESSION_ID=$(echo $RESPONSE | jq -r '.icSessionId')
+          SESSION_ID=$(echo $RESPONSE | jq -r '.userInfo.icSessionId')
+          echo $SESSION_ID
           if [ "$SESSION_ID" = "null" ] || [ -z "$SESSION_ID" ]; then
             echo "Authentication failed"
             exit 1
           fi
           echo "SESSION_ID=$SESSION_ID" >> $GITHUB_ENV
           
-          INFA_API_URL=$(echo $RESPONSE | jq -r '.baseApiUrl')
+          INFA_API_URL=$(echo $RESPONSE | jq -r '.products.baseApiUrl')
           echo "INFA_API_URL=$INFA_API_URL" >> $GITHUB_ENV
 
       - name: Pull into Infa Cloud
