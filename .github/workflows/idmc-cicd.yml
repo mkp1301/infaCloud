@@ -47,7 +47,7 @@ jobs:
             https://dm-us.informaticacloud.com/saas/public/core/v3/login)
 
           echo "Full response: $RESPONSE"
-          SESSION_ID=$(echo $RESPONSE | jq -r '.userInfo.icSessionId')
+          SESSION_ID=$(echo $RESPONSE | jq -r '.userInfo.sessionId')
           echo $SESSION_ID
           if [ "$SESSION_ID" = "null" ] || [ -z "$SESSION_ID" ]; then
             echo "Authentication failed"
