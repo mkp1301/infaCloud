@@ -6,7 +6,7 @@ on:
     branches:
       - dev
     tags:
-      - 'Jira-*'   # Only run when a tag starting with "qa-" is created on a dev commit
+      - 'Jira-*'   # Only run when a tag starting with "Jira" is created on a dev commit
 
 jobs:
   promote:
