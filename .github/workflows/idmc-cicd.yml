@@ -38,13 +38,14 @@ jobs:
         id: infa_auth
         run: |
           echo "Authenticating with Informatica Cloud..."
+          echo "${{ secrets.IDMC_USER }}"
           RESPONSE=$(curl -s -X POST \
             -H "Content-Type: application/json" \
             -d '{
                   "username": "${{ secrets.IDMC_USER }}",
                   "password": "${{ secrets.IDMC_PASS }}"
                 }' \
-            https://dm-us.informaticacloud.com/ma/api/v2/user/login)
+            https://dm-us.informaticacloud.com/saas/public/core/v3/login)
 
           echo "Full response: $RESPONSE"
           SESSION_ID=$(echo $RESPONSE | jq -r '.icSessionId')
