@@ -41,8 +41,8 @@ jobs:
           RESPONSE=$(curl -s -X POST \
             -H "Content-Type: application/json" \
             -d '{
-                  "username": "${{ secrets.INFA_USER }}",
-                  "password": "${{ secrets.INFA_PASS }}"
+                  "username": "${{ secrets.IDMC_USER }}",
+                  "password": "${{ secrets.IDMC_PASS }}"
                 }' \
             https://dm-us.informaticacloud.com/ma/api/v2/user/login)
 
