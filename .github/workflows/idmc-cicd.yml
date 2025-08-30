@@ -64,6 +64,7 @@ jobs:
           echo "Pulling code into Infa Cloud..."
           RESPONSE=$(curl -s -X POST \
             -H "Content-Type: application/json" \
+            -H "INFA-SESSION-ID: $SESSION_ID" \
             -d '{
                   "commitHash": "$GITHUB_SHA",
                   "searchCustomRepositories": true
