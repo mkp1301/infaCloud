@@ -70,7 +70,7 @@ jobs:
             -H "Content-Type: application/json" \
             -H "INFA-SESSION-ID: $SESSION_ID" \
             -d '{
-                  "commitHash": "${COMMIT_SHA}",
+                  "commitHash": "'"$COMMIT_SHA"'",
                   "searchCustomRepositories": true
                 }' \
             $INFA_API_URL/public/core/v3/pullByCommitHash
