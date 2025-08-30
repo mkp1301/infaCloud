@@ -14,10 +14,7 @@
         "link" : "Filter -> Expression"
       },
       {
-        "link" : "Aggregator -> Filter"
-      },
-      {
-        "link" : "Source -> Aggregator"
+        "link" : "Source -> Filter"
       }
     ],
     "transformations" : [
@@ -298,25 +295,8 @@
             ]
           }
         ]
-      },
-      {
-        "createTime" : "2025-08-30T03:24:38.781Z",
-        "name" : "Aggregator",
-        "groups" : [
-          {
-            "input" : "true",
-            "name" : "DefaultGroup",
-            "output" : "true",
-            "rules" : [
-              {
-                "bulkRename" : "false",
-                "include" : "true"
-              }
-            ]
-          }
-        ]
       }
     ]
   },
-  "vcsExportTime" : "2025-08-29 20:25:05 PDT"
+  "vcsExportTime" : "2025-08-29 20:31:40 PDT"
 }
