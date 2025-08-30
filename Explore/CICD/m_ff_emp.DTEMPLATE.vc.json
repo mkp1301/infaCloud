@@ -14,7 +14,10 @@
         "link" : "Filter -> Expression"
       },
       {
-        "link" : "Source -> Filter"
+        "link" : "Expression1 -> Filter"
+      },
+      {
+        "link" : "Source -> Expression1"
       }
     ],
     "transformations" : [
@@ -295,8 +298,33 @@
             ]
           }
         ]
+      },
+      {
+        "createTime" : "2025-08-30T02:49:32.563Z",
+        "name" : "Expression1",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
       }
     ]
   },
-  "vcsExportTime" : "2025-08-29 14:01:09 PDT"
+  "vcsExportTime" : "2025-08-29 19:50:24 PDT"
 }
