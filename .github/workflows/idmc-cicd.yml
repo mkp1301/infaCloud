@@ -62,7 +62,7 @@ jobs:
           INFA_API_URL=$(echo $RESPONSE | jq -r '.products[0].baseApiUrl')
           echo "INFA_API_URL=$INFA_API_URL" >> $GITHUB_ENV
 
-      - name: Pull into Infa Cloud
+      - name: Deploy to QA Infa Cloud
         id: infa_pull_by_hash
         run: |
           echo "Pulling code into Infa Cloud..."
