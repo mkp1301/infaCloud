@@ -14,7 +14,10 @@
         "link" : "Filter -> Expression"
       },
       {
-        "link" : "Source -> Filter"
+        "link" : "Filter1 -> Filter"
+      },
+      {
+        "link" : "Source -> Filter1"
       }
     ],
     "transformations" : [
@@ -295,8 +298,25 @@
             ]
           }
         ]
+      },
+      {
+        "createTime" : "2025-09-02T19:38:39.768Z",
+        "name" : "Filter1",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
-  "vcsExportTime" : "2025-09-02 12:28:32 PDT"
+  "vcsExportTime" : "2025-09-02 12:39:13 PDT"
 }
